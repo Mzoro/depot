@@ -5,10 +5,14 @@ class Product < ActiveRecord::Base
   validates :image_url, allow_blank: true, format: {
 									  		 with: %r{\.(gif|jpg|png)\Z}i,
 									  	  message: 'must be a URL for GIF, JPG or PNG image.'}
-	has_many :line_items
-	before_destroy :ensure_not_referenced_by_any_line_item
+  has_many :line_items
+  before_destroy :ensure_not_referenced_by_any_line_item
 
-	private
+  def self.latest
+  	Product.order(:updated_at).last  
+  end
+  	
+  	private
   # убеждаемся в отсутствии товарных позиций, ссылающихся на данный товар
 		
 		def ensure_not_referenced_by_any_line_item
