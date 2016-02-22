@@ -1,4 +1,7 @@
-layouts:
+es:
+
+
+  layouts:
     application:
       title:       "Publicaciones de Pragmatic"
       home:        "Inicio"

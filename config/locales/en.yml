@@ -18,7 +18,27 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
+#START:layout
+#START:main
+#START:cart
+#START:currency
+#START:checkout
+#START:flash
+en:
 
+#END:cart
+#END:checkout
+#END:flash
+#END:main
+#END:layout
+
+#END:currency
+
+#START:errors
+ 
+#END:errors
+
+#START:layout
   layouts:
     application:
       title:       "Pragmatic Bookshelf"
@@ -26,6 +46,7 @@
       questions:   "Questions"
       news:        "News"
       contact:     "Contact"
+
 
  
         
