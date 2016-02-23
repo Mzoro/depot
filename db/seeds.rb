@@ -47,4 +47,10 @@ Product.create!(title: 'Rails Test Prescriptions',
 User.create!(name:  "dave",
              password:              "foobar",
              password_confirmation: "foobar")
+
+Order.create!(name:  "Alex",
+              address:              "Kyiv, 47899",
+              email: "depot@example.com",
+              pay_type: "Check")
+
            
